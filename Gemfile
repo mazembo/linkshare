@@ -41,7 +41,18 @@ gem 'devise', '~> 3.3.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
-gem 'pry'
+gem 'pry-rails'
 gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'acts_as_votable', '~> 0.10.0'
 gem 'simple_form', '~>3.0.2'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0.2'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'capybara', '~> 2.4.1'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', require: false
+end
